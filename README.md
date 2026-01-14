@@ -33,7 +33,7 @@ Profiles=desktop,kde
 It is also strongly recommended to write a hashed root password prefixed with
 `hashed:` to `mkosi.rootpw` to allow debugging the system if something breaks.
 
-To build the image, run `mkosi -B -f` from the ParticleOS repository. Currently
+To build the image, run `mkosi -B -f qemu -- -device virtio-vga-gl -display sdl,gl=on` from the ParticleOS repository. Currently
 `arch`, `fedora` and `debian` are supported distributions. Implementing support for a
 new distribution (that's already supported in mkosi) is as simple as writing the
 necessary config files to install the required packages for that distribution.
@@ -48,7 +48,7 @@ run `mkosi -B -ff sysupdate -- update --reboot` which will update the system usi
 Sometimes ParticleOS adopts systemd features as soon as they get merged into
 systemd without waiting for an official release. That's why we recommend
 enabling the `obs` profile to enable the systemd repositories on OBS
-(https://software.opensuse.org//download.html?project=system%3Asystemd&package=systemd)
+(<https://software.opensuse.org//download.html?project=system%3Asystemd&package=systemd>)
 containing systemd packages which are built every day from systemd's git main
 branch.
 
@@ -86,7 +86,7 @@ Make sure the distribution and release in `mkosi.local.conf` are identical in th
 systemd checkout and the particleos checkout.
 
 To build a newer systemd, run `git pull` in the systemd repository followed by
- `mkosi -f sandbox -- meson compile -C build` and `mkosi -t none`.
+`mkosi -f sandbox -- meson compile -C build` and `mkosi -t none`.
 
 ## Signing keys
 
