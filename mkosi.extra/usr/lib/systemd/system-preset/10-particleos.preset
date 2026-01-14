@@ -12,6 +12,9 @@ enable systemd-resolved.service
 enable NetworkManager.service
 enable NetworkManager-wait-online.service
 
+# Enable bluetooth support
+enable bluetooth.service
+
 # These are not enabled by default in the default systemd preset.
 enable systemd-timesyncd.service
 enable systemd-homed-firstboot.service
