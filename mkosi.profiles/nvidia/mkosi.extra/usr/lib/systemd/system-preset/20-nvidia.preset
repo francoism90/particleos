@@ -2,7 +2,6 @@
 
 # Make sure to enable the nvidia services.
 enable nvidia-hibernate.service
-enable nvidia-persistenced.service
 enable nvidia-powerd.service
 enable nvidia-resume.service
 enable nvidia-suspend.service
