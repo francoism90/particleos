@@ -1,5 +1,8 @@
 # SPDX-License-Identifier: LGPL-2.1-or-later
 
+# Enable apparmor protection
+enable apparmor.service
+
 # Make sure we have networking available.
 enable systemd-networkd.service
 enable systemd-networkd.socket
@@ -31,9 +34,6 @@ enable tuned-ppd.service
 
 # Our own service to run systemctl preset --global.
 enable preset-global.service
-
-# Should be enabled manually by the user after first boot.
-disable gdm.service
 
 # Prefer socket activated SSH over daemon SSH
 disable sshd.service
