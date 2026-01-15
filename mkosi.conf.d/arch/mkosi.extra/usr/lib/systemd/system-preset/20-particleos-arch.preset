@@ -1,0 +1,5 @@
+# Enable Btrfs maintenance timers
+enable btrfs-balance.timer
+enable btrfs-defrag.timer
+enable btrfs-scrub.timer
+enable btrfs-trim.timer

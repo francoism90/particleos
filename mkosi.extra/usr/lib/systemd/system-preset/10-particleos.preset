@@ -12,6 +12,9 @@ enable systemd-resolved.service
 enable NetworkManager.service
 enable NetworkManager-wait-online.service
 
+# Enable network firewall
+enable ufw.service
+
 # Enable bluetooth support
 enable bluetooth.service
 
