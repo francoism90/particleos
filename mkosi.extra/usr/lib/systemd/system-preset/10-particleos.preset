@@ -28,7 +28,7 @@ disable avahi.*
 # Enable support for smart card readers
 enable pcscd.service
 
-# Enable service to check the availability of dual-GPU,
+# Enable service to check the availability of dual-GPU.
 enable switcheroo-control.service
 
 # Enable tuned for power management
