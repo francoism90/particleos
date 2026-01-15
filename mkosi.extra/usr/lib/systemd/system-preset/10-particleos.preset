@@ -1,5 +1,8 @@
 # SPDX-License-Identifier: LGPL-2.1-or-later
 
+# Enable packet filtering
+enable nftables.service
+
 # Make sure we have networking available.
 enable systemd-networkd.service
 enable systemd-networkd.socket
