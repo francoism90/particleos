@@ -1,8 +1,5 @@
 # SPDX-License-Identifier: LGPL-2.1-or-later
 
-# Enable apparmor protection
-enable apparmor.service
-
 # Make sure we have networking available.
 enable systemd-networkd.service
 enable systemd-networkd.socket
