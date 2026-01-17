@@ -1,5 +1,8 @@
 # SPDX-License-Identifier: LGPL-2.1-or-later
 
+# Enable apparmor
+enable apparmor.service
+
 # Enable packet filtering
 enable nftables.service
 
